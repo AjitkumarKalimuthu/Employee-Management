@@ -48,23 +48,25 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   login(): void {
-    this._authService
-      .login(
-        this.userFormGroup.value.username,
-        this.userFormGroup.value.password
-      )
-      .pipe(
-        tap((resp: User[]) => {
-          if (resp?.length > 0) {
-            this.isInvalidCredentials = false;
-            this._router.navigateByUrl('/employee-list');
-          } else {
-            this.isInvalidCredentials = true;
-          }
-        }),
-        takeUntil(this._destroy$)
-      )
-      .subscribe();
+    if (this.userFormGroup.valid) {
+      this._authService
+        .login(
+          this.userFormGroup.value.username,
+          this.userFormGroup.value.password
+        )
+        .pipe(
+          tap((resp: User[]) => {
+            if (resp?.length > 0) {
+              this.isInvalidCredentials = false;
+              this._router.navigateByUrl('/employee-list');
+            } else {
+              this.isInvalidCredentials = true;
+            }
+          }),
+          takeUntil(this._destroy$)
+        )
+        .subscribe();
+    }
   }
 
   ngOnDestroy(): void {
