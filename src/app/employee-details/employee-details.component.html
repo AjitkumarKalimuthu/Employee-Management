@@ -1,0 +1,141 @@
+<div class="employee-details-header">
+  <div class="header-left">
+    <div class="header-text">Dashboard</div>
+    <div
+      class="header-text"
+      [class.seleted-tab]="!showPerformanceChart"
+      (click)="showPerformanceChart = false"
+    >
+      Leave
+    </div>
+    <div
+      class="header-text"
+      [class.seleted-tab]="showPerformanceChart"
+      (click)="showPerformanceChart = true"
+    >
+      Performance
+    </div>
+  </div>
+  <div class="header-right">
+    <mat-icon>mail</mat-icon>
+    <mat-icon>notifications</mat-icon>
+    <mat-icon>person</mat-icon>
+  </div>
+</div>
+<div class="dashboard">
+  <div class="performance-summary">
+    <mat-card class="summary-card">
+      <div class="performance-card">
+        <div class="performance-left-wrapper">
+          <div class="material-card-title">My Performance</div>
+          <div class="performance-card-score">202/240</div>
+          <div>Good Score</div>
+        </div>
+        <div class="performance-right-wrapper">
+          <mat-progress-spinner
+            mode="determinate"
+            [value]="84.34"
+            diameter="100"
+            strokeWidth="10"
+          >
+          </mat-progress-spinner>
+          <div class="progress-text">{{ 84.34 | number : "1.0-2" }}%</div>
+        </div>
+      </div>
+    </mat-card>
+    <mat-card class="summary-card">
+      <div class="performance-card text-left-wrapper">
+        <div class="performance-left-wrapper">
+          <div class="material-card-title">Task Assigned</div>
+          <div class="performance-card-score">189 tasks</div>
+          <div>223 Average tasks per user</div>
+        </div>
+        <div class="icon-right-wrapper">
+          <mat-icon>checklist</mat-icon>
+        </div>
+      </div>
+    </mat-card>
+    <mat-card class="summary-card">
+      <div class="performance-card text-left-wrapper">
+        <div class="performance-left-wrapper">
+          <div class="material-card-title">Task Completion</div>
+          <div class="performance-card-score">98.56%</div>
+          <div>Good score</div>
+        </div>
+        <div class="icon-right-wrapper">
+          <mat-icon>check_circle</mat-icon>
+        </div>
+      </div>
+    </mat-card>
+    <mat-card class="summary-card">
+      <div class="performance-card text-left-wrapper">
+        <div class="performance-left-wrapper">
+          <div class="material-card-title">Attendance %</div>
+          <div class="performance-card-score">89.87%</div>
+          <div>Average score</div>
+        </div>
+        <div class="icon-right-wrapper">
+          <mat-icon>schedule</mat-icon>
+        </div>
+      </div>
+    </mat-card>
+    <mat-card class="summary-card">
+      <div class="performance-card text-left-wrapper">
+        <div class="performance-left-wrapper">
+          <div class="material-card-title">Leaves</div>
+          <div class="performance-card-score">100%</div>
+          <div>Perfect score</div>
+        </div>
+        <div class="icon-right-wrapper">
+          <mat-icon>event_available</mat-icon>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div class="employee-details-wrapper">
+    <mat-card class="my-team-table-container">
+      <div class="material-card-title">My Team</div>
+      <table mat-table [dataSource]="employeesPerformanceDetails">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let employee">{{ employee.name }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="role">
+          <th mat-header-cell *matHeaderCellDef>Role</th>
+          <td mat-cell *matCellDef="let employee">{{ employee.role }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="score">
+          <th mat-header-cell *matHeaderCellDef>Score</th>
+          <td mat-cell *matCellDef="let employee">{{ employee.score }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="currentMonthScore">
+          <th mat-header-cell *matHeaderCellDef>This month</th>
+          <td mat-cell *matCellDef="let employee">
+            {{ employee.currentMonthScore }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="lastMonthScore">
+          <th mat-header-cell *matHeaderCellDef>Last month</th>
+          <td mat-cell *matCellDef="let employee">
+            {{ employee.lastMonthScore }}
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </mat-card>
+    <mat-card class="my-team-table-container">
+      <app-performance-chart
+        *ngIf="showPerformanceChart"
+      ></app-performance-chart>
+      <app-annual-leave-chart
+        *ngIf="!showPerformanceChart"
+      ></app-annual-leave-chart>
+    </mat-card>
+  </div>
+</div>

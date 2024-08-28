@@ -1,0 +1,18 @@
+.confirmation-container {
+  background-color: white;
+  & > * {
+    color: black;
+  }
+  h1 {
+    color: white;
+    background-color: #7d7676;
+    margin-bottom: 10px;
+  }
+  .mat-dialog-btn-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  button {
+    margin-right: 8px;
+  }
+}

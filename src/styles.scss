@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.login-container,
+.update-employee-container {
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #ede4e4;
+    border-radius: 30px;
+  }
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label,
+  .mdc-text-field--filled:not(.mdc-text-field--disabled)
+    .mdc-text-field__input {
+    color: black;
+  }
+}
+.employee-container,
+.my-team-table-container {
+  table {
+    thead {
+        tr {
+            &.mat-mdc-header-row {
+                background-color: white;
+                color: black;
+                font-weight: bold;
+            }
+            .mdc-checkbox__background {
+                border-color: #bbb5b5 !important;
+            }
+        }
+    }
+    tbody {
+        tr {
+            &.mat-mdc-row {
+                color: black;
+                &:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+                &:nth-child(odd) {
+                    background-color: #ffffff;
+                }
+                &:hover {
+                    background-color: #e0e0e0;
+                }
+            }
+            &.mat-mdc-header-row {
+                background-color: white;
+                color: black;
+                font-weight: bold;
+            }
+            .mdc-checkbox__background {
+                border-color: #bbb5b5 !important;
+            }
+        }
+    }
+  }
+  .mat-mdc-paginator-container {
+    justify-content: space-between;
+    background-color: #37376f;
+  }
+}
+.chart-container {
+  margin: 20px 0;
+  canvas {
+    width: 100% !important;
+    height: 250px !important;
+  }
+  .chart-card-title {
+    font-weight: bold;
+    color: grey;
+    padding: 10px;
+  }
+}

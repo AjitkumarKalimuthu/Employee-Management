@@ -1,0 +1,41 @@
+.update-employee-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  mat-card {
+    width: 100%;
+    max-width: 400px;
+    max-height: 600px;
+    height: 100%;
+    background-color: white;
+    border-radius: 30px;
+  }
+  mat-form-field {
+    width: 100%;
+  }
+  mat-label {
+    color: black;
+  }
+  mat-card-header {
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: #2fdf2f;
+    border-radius: 30px 30px 0px 0px;
+    color: white;
+  }
+  .login-form {
+    margin-top: 30px;
+    button {
+      color: white;
+      background-color: #2fdf2f !important;
+      width: 100%;
+      border-radius: 30px;
+      margin-top: 16px;
+    }
+    .cancel-btn {
+      background-color: #a59b9b !important;
+    }
+  }
+}

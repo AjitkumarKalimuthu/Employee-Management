@@ -1,0 +1,26 @@
+.employee-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 10px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    background-color: #37376f;
+    h2 {
+      color: white;
+    }
+  }
+  .mat-elevation-z8 {
+    margin-top: 16px;
+    border-collapse: collapse;
+  }
+  .actions {
+    display: flex;
+    gap: 8px;
+  }
+  .yellow-icon {
+    color: yellow;
+  }
+}

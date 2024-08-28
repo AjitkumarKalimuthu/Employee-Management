@@ -1,0 +1,118 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Admin1",
+      "password": "admin123",
+      "privilegeType": "SOP1"
+    },
+    {
+      "id": "2",
+      "username": "Admin2",
+      "password": "admin456",
+      "privilegeType": "SOP2"
+    }
+  ],
+  "employees": [
+    {
+      "name": "John Doe",
+      "address": "ABC11 Street",
+      "phoneNo": "(+123) 1211 560",
+      "email": "abc1@gmail.com",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Thomas Hardy",
+      "email": "abc2@gmail.com",
+      "address": "ABC2 Street",
+      "phoneNo": "(+123) 1234 561"
+    },
+    {
+      "id": "3",
+      "name": "Arya Kevin",
+      "email": "abc3@gmail.com",
+      "address": "ABC3 Street",
+      "phoneNo": "(+123) 1234 562"
+    },
+    {
+      "id": "4",
+      "name": "Bran Martin",
+      "email": "abc4@gmail.com",
+      "address": "ABC4 Street",
+      "phoneNo": "(+123) 1234 563"
+    },
+    {
+      "id": "5",
+      "name": "Jenny Luther",
+      "email": "abc5@gmail.com",
+      "address": "ABC5 Street",
+      "phoneNo": "(+123) 1234 564"
+    },
+    {
+      "id": "6",
+      "name": "Rob Hardy",
+      "email": "abc6@gmail.com",
+      "address": "ABC6 Street",
+      "phoneNo": "(+123) 1234 565"
+    },
+    {
+      "id": "7",
+      "name": "Bran Wilson",
+      "email": "abc7@gmail.com",
+      "address": "ABC7 Street",
+      "phoneNo": "(+123) 1234 566"
+    },
+    {
+      "id": "8",
+      "name": "Ben Kin",
+      "email": "abc8@gmail.com",
+      "address": "ABC8 Street",
+      "phoneNo": "(+123) 1234 567"
+    },
+    {
+      "id": "9",
+      "name": "Hancock Martin",
+      "email": "abc9@gmail.com",
+      "address": "ABC9 Street",
+      "phoneNo": "(+123) 1234 568"
+    },
+    {
+      "id": "10",
+      "name": "Jogn Gregor",
+      "address": "ABC 11A Street",
+      "phoneNo": "(+123) 7658242",
+      "email": "abc11@gmail.com"
+    }
+  ],
+  "employees-performance-details": [
+    {
+      "name": "Alena Gouse",
+      "role": "UI Designer - UID1",
+      "score": 201,
+      "currentMonthScore": "83.45%",
+      "lastMonthScore": "82.00%"
+    },
+    {
+      "name": "Aian Walker",
+      "role": "UI Designer - UID3",
+      "score": 223,
+      "currentMonthScore": "97.98%",
+      "lastMonthScore": "61.00%"
+    },
+    {
+      "name": "Miracle Vetrovs",
+      "role": "UX Designer - UXD2",
+      "score": 217,
+      "currentMonthScore": "91.55%",
+      "lastMonthScore": "87.50%"
+    },
+    {
+      "name": "Avery Atwood",
+      "role": "UX Designer - UXD1",
+      "score": 187,
+      "currentMonthScore": "72.67%",
+      "lastMonthScore": "81.33%"
+    }
+  ]
+}
